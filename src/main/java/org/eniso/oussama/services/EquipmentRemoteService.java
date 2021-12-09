@@ -8,7 +8,7 @@ import javax.ws.rs.*;
 import java.util.List;
 
 @Path("/equipments")
-@RegisterRestClient(configKey = "nodejs-api")
+@RegisterRestClient(configKey = "crud-api")
 public interface EquipmentRemoteService {
 
     @GET

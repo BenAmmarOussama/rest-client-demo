@@ -8,7 +8,7 @@ import javax.ws.rs.*;
 import java.util.List;
 
 @Path("/users")
-@RegisterRestClient(configKey = "nodejs-api")
+@RegisterRestClient(configKey = "crud-api")
 public interface UsersRemoteService {
 
     @GET
@@ -21,5 +21,9 @@ public interface UsersRemoteService {
     @POST
     @Path("/technician")
     User addTechnician(User user);
+
+    @POST
+    @Path("/student")
+    User addStudent(User user);
 
 }

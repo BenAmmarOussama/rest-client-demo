@@ -12,13 +12,13 @@ import javax.ws.rs.core.MediaType;
 public class DemoResource {
 
 
-    @Channel("demo-requests")
-    Emitter<String> demoEmitter;
+    //@Channel("spring-quarkus-out")
+    Emitter<Long> demoEmitter;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String sendToMq(){
-        demoEmitter.send("This is a demo message");
+        demoEmitter.send(10L);
         return "Demo resource works!";
     }
 
