@@ -15,7 +15,7 @@ import javax.inject.Inject;
 public class AddUserMqConsumer {
 
     @Channel("spring-quarkus-out")
-    Emitter<Long> enableAccountMqEmitter;
+    Emitter<String> enableAccountMqEmitter;
 
     @Inject
     @RestClient
@@ -26,18 +26,22 @@ public class AddUserMqConsumer {
         User user = m.mapTo(User.class);
 
         // If Student, add user to DB then put id in queue to enable his account
-        if(user.getRole().equals("STUDENT")){
-            usersRemoteService.addStudent(user);
-            enableAccountMqEmitter.send(user.getId());
-        }
+        //if(user.getRole().equals("STUDENT")){
+        //    usersRemoteService.addStudent(user);
+        //    enableAccountMqEmitter.send(user.getId());
+        //}
 
         // If Technician, check if user exists in DB, if Yes put id in queue
         // to enable his account
-        if (user.getRole().equals("TECHNICIAN")){
-            if(usersRemoteService.getUser(user.getId()) != null){
-                enableAccountMqEmitter.send(user.getId());
-            }
-        }
+        //if (user.getRole().equals("TECHNICIAN")){
+        //    if(usersRemoteService.getUser(user.getId()) != null){
+        //        enableAccountMqEmitter.send(user.getId());
+        //    }
+        //}
+
+        enableAccountMqEmitter.send(user.getId());
+
+        System.out.println(">>> received user= " + user);
 
     }
 }

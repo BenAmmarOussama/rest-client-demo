@@ -1,7 +1,7 @@
 package org.eniso.oussama.models;
 
 public class User {
-    private long id;
+    private String id;
     private String name;
     private String email;
     private String tel;
@@ -11,7 +11,7 @@ public class User {
     public User() {
     }
 
-    public User(long id, String name, String email, String tel, String department, String role) {
+    public User(String id, String name, String email, String tel, String department, String role) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -20,11 +20,11 @@ public class User {
         this.role = role;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -66,5 +66,17 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", tel='" + tel + '\'' +
+                ", department='" + department + '\'' +
+                ", role='" + role + '\'' +
+                '}';
     }
 }

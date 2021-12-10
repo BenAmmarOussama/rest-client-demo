@@ -25,7 +25,7 @@ public class UsersResource {
 
     @GET
     @Path("/{id}")
-    public User getUser(@PathParam long id){
+    public User getUser(@PathParam String id){
         return usersRemoteService.getUser(id);
     };
 

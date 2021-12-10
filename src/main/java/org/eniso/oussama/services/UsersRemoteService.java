@@ -16,7 +16,7 @@ public interface UsersRemoteService {
 
     @GET
     @Path("/{id}")
-    User getUser(@PathParam long id);
+    User getUser(@PathParam String id);
 
     @POST
     @Path("/technician")
