@@ -5,6 +5,9 @@ import org.eclipse.microprofile.rest.client.ext.ClientHeadersFactory;
 import javax.ws.rs.core.MultivaluedHashMap;
 import javax.ws.rs.core.MultivaluedMap;
 
+/*
+* This class is needed to propagate Headers to external APIs (DropWizard API in our case)
+* */
 public class AuthorizationHeaderFactory implements ClientHeadersFactory {
     @Override
     public MultivaluedMap<String, String> update(

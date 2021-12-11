@@ -23,7 +23,7 @@ public class EquipmentsResource {
 
     @GET
     @Path("/{id}")
-    public Equipment getEquipment(@PathParam long id){
+    public Equipment getEquipment(@PathParam int id){
         return equipmentRemoteService.getEquipment(id);
     };
 
@@ -34,13 +34,13 @@ public class EquipmentsResource {
 
     @PUT
     @Path("/{id}")
-    public Equipment updateEquipment(@PathParam long id){
+    public Equipment updateEquipment(@PathParam int id){
         return equipmentRemoteService.updateEquipment(id);
     };
 
     @DELETE
     @Path("/{id}")
-    public Equipment deleteEquipment(@PathParam long id){
+    public Equipment deleteEquipment(@PathParam int id){
         return equipmentRemoteService.deleteEquipment(id);
     };
 

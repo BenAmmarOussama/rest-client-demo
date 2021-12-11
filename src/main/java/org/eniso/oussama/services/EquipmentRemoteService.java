@@ -1,6 +1,8 @@
 package org.eniso.oussama.services;
 
+import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
+import org.eniso.oussama.ExceptionHandler.MyExceptionMapper;
 import org.eniso.oussama.models.Equipment;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
@@ -8,6 +10,7 @@ import javax.ws.rs.*;
 import java.util.List;
 
 @Path("/equipments")
+@RegisterProvider(MyExceptionMapper.class)
 @RegisterRestClient(configKey = "crud-api")
 public interface EquipmentRemoteService {
 
@@ -16,17 +19,17 @@ public interface EquipmentRemoteService {
 
     @GET
     @Path("/{id}")
-    Equipment getEquipment(@PathParam long id);
+    Equipment getEquipment(@PathParam("id") int id);
 
     @POST
     Equipment createEquipment(Equipment equipment);
 
     @PUT
     @Path("/{id}")
-    Equipment updateEquipment(@PathParam long id);
+    Equipment updateEquipment(@PathParam int id);
 
     @DELETE
     @Path("/{id}")
-    Equipment deleteEquipment(@PathParam long id);
+    Equipment deleteEquipment(@PathParam int id);
 
 }

@@ -2,16 +2,19 @@ package org.eniso.oussama.models;
 
 public class Equipment {
 
-    private long id;
+    private int id;
     private String title;
     private int quantity;
     private String description;
 
-    public long getId() {
+    public Equipment() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -43,7 +46,7 @@ public class Equipment {
         this.title = title;
     }
 
-    public Equipment(long id, String title, int quantity, String description) {
+    public Equipment(int id, String title, int quantity, String description) {
         this.id = id;
         this.title = title;
         this.quantity = quantity;

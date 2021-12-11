@@ -30,9 +30,8 @@ public class UsersResource {
     };
 
     @POST
-    @Path("/technician")
-    public User addTechnician(User user){
-        return usersRemoteService.addTechnician(user);
+    public User addUser(User user){
+        return usersRemoteService.addUser(user);
     };
 
 }
