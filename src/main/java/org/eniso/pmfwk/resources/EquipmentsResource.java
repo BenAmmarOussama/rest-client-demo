@@ -1,8 +1,8 @@
-package org.eniso.oussama.resources;
+package org.eniso.pmfwk.resources;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
-import org.eniso.oussama.models.Equipment;
-import org.eniso.oussama.services.EquipmentRemoteService;
+import org.eniso.pmfwk.models.Equipment;
+import org.eniso.pmfwk.services.EquipmentRemoteService;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
 import javax.inject.Inject;

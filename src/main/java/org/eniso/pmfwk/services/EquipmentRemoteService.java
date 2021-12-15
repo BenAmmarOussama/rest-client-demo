@@ -1,9 +1,9 @@
-package org.eniso.oussama.services;
+package org.eniso.pmfwk.services;
 
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
-import org.eniso.oussama.ExceptionHandler.MyExceptionMapper;
-import org.eniso.oussama.models.Equipment;
+import org.eniso.pmfwk.ExceptionHandler.MyExceptionMapper;
+import org.eniso.pmfwk.models.Equipment;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
 import javax.ws.rs.*;

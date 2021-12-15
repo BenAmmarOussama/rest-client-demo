@@ -1,4 +1,4 @@
-package org.eniso.oussama;
+package org.eniso.pmfwk;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

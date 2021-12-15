@@ -1,4 +1,4 @@
-package org.eniso.oussama.utils;
+package org.eniso.pmfwk.utils;
 
 import org.eclipse.microprofile.rest.client.ext.ClientHeadersFactory;
 

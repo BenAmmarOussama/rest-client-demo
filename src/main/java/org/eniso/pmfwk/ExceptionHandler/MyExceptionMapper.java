@@ -1,4 +1,4 @@
-package org.eniso.oussama.ExceptionHandler;
+package org.eniso.pmfwk.ExceptionHandler;
 
 import org.eclipse.microprofile.rest.client.ext.ResponseExceptionMapper;
 

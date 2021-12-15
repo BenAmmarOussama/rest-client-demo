@@ -1,4 +1,4 @@
-package org.eniso.oussama.models;
+package org.eniso.pmfwk.models;
 
 public class Equipment {
 

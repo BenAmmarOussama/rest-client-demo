@@ -1,17 +1,20 @@
-package org.eniso.oussama.consumer;
+package org.eniso.pmfwk.consumer;
 
 import io.vertx.core.json.JsonObject;
 import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.eclipse.microprofile.reactive.messaging.Emitter;
 import org.eclipse.microprofile.reactive.messaging.Incoming;
+import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
-import org.eniso.oussama.models.User;
-import org.eniso.oussama.services.UsersRemoteService;
+import org.eniso.pmfwk.ExceptionHandler.MyExceptionMapper;
+import org.eniso.pmfwk.models.User;
+import org.eniso.pmfwk.services.UsersRemoteService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 @ApplicationScoped
+@RegisterProvider(MyExceptionMapper.class)
 public class AddUserMqConsumer {
 
     @Channel("spring-quarkus-out")
